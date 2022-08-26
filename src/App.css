@@ -1,5 +1,5 @@
 /* App CSS */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:regular,bold');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,bold");
 
 * {
     box-sizing: border-box;
@@ -7,72 +7,107 @@
 
 h1 {
     font-size: 33px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bold;
 }
 
 h2 {
     font-size: 28px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bold;
 }
 
 h3 {
     font-size: 23px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: bold;
+}
+
+h4 {
+    font-size: 18px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    margin: 8px 0;
 }
 
 body {
     font-size: 16px;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
 }
 
 .content-less {
     float: left;
-    width: 15%;
+    width: 10%;
     padding: 15px;
 }
+
 .content {
     float: left;
-    width: 70%;
+    width: 80%;
     padding: 15px;
 }
 
 .navbar {
     padding: 0.5rem 3rem;
-    background-color: #F8CF47;
+    background-color: #f8cf47;
+}
+
+.profile-card {
+    width: 33.33%;
+    float: left;
+    padding: 0 1rem 0 0;
+    margin-bottom: 1rem;
+}
+
+.pet-image {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    height: 250px;
+}
+
+.button {
+    font-size: 15px;
+    font-family: "Open Sans";
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    max-width: 100%;
+    min-width: 150px;
+    height: 40px;
+    margin: 2px 0;
+}
+
+.primary {
+    color: #FFFFFF;
+    background-color: #2B6DB1;
 }
 
 @media only screen and (max-width: 480px) {
+
     /* For mobile phones: */
     h1 {
         font-size: 26px;
-        font-family: 'Open Sans';
-        font-weight: bold;
     }
-    
+
     h2 {
         font-size: 23px;
-        font-family: 'Open Sans';
-        font-weight: bold;
     }
 
     h3 {
         font-size: 20px;
-        font-family: 'Open Sans';
-        font-weight: bold;
     }
-    
+
     .content-less {
         width: 0%;
     }
+
     .content {
         width: 100%;
     }
-    
+
     .navbar {
         padding: 1rem 0.5rem;
-        background-color: #FFFFFF;
+        background-color: #ffffff;
     }
 }

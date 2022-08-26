@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 // components
+import Results from './Results';
 
 // actions
 import { fetchPets } from '../../state/pet/actions';
@@ -20,13 +21,14 @@ function Home() {
       <div className="content">
         <h1>Pets</h1>
         {/* Search Component */}
-        {/* Results Component */}
-        <h3>Results</h3>
+
         {
-          pets.map(pet => {
-            return <p key={ pet.id } >{ pet.name }</p>            
-          })
+          pets.length > 0 ? <Results pets={ pets } /> : null
         }
+
+        {/* Pets Directory Component */}
+        {/* Categories Component */}
+
       </div>
       <div className="content-less"></div>
     </div>

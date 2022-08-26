@@ -14,6 +14,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="profile" element={<Profile />} />
       </Routes>
+
+      {/* Footer Component */}
+
     </div>
   );
 }
