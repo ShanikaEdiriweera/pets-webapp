@@ -1,22 +1,41 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import Home from './pages/home';
+import Directory from "./pages/directory";
 import './App.css';
 
 function App() {
+  const navigate = useNavigate();
+
   return (
-    <div className="App">
+    <div className="app">
       <nav
         className="navbar"
       >
-        <img src={ 'icons/pet-icon.svg' } alt='Pets Logo' className="logo" />
+        <img
+          src={ 'icons/pet-icon.svg' }
+          alt='Pets Logo'
+          className="logo"
+          onClick={ () => navigate("/") }
+        />
+        <img
+          src={ 'icons/pet-icon-small.svg' }
+          alt='Pets Logo'
+          className="logo-mobile"
+          onClick={ () => navigate("/") }
+        />
       </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="profile" element={<Profile />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="directory" element={<Directory />} />
+        </Routes>
+      </div>
+
 
       {/* Footer Component */}
-
+      <div className="footer">
+      </div>
     </div>
   );
 }
