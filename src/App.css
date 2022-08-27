@@ -8,6 +8,7 @@
     --dark-blue: #285DAB;
     --dark-grey: #666666;
     --grey: #DDDDDD;
+    --light-grey: #F0F0F0;
 }
 
 * {
@@ -79,11 +80,12 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+
     /* For mobile phones: */
     .logo {
         display: none;
     }
-    
+
     .logo-mobile {
         display: block;
     }

@@ -18,7 +18,7 @@ function Directory() {
   }, [dispatch, pets.length]);
 
   return (
-    <div className="row">
+    <>
       <div className="content-less"></div>
       <div className="content">
         <h1>Pets</h1>
@@ -27,7 +27,7 @@ function Directory() {
 
       </div>
       <div className="content-less"></div>
-    </div>
+    </>
   );
 }
 

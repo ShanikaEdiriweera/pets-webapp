@@ -2,7 +2,7 @@
 import ProfileCard from "./ProfileCard";
 
 function Results({ pets, limit, isOnlyAvailable }) {
-  const filteredPets = isOnlyAvailable ? pets.fliter(pet => pet.available === "Yes") : pets;
+  const filteredPets = isOnlyAvailable ? pets.filter(pet => pet.available === "Yes") : pets;
   const results = filteredPets.length > limit ? filteredPets.slice(0, limit) : filteredPets;
   return (
     <div>

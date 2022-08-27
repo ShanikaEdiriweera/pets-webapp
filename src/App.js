@@ -8,34 +8,38 @@ function App() {
 
   return (
     <div className="app">
-      <nav
-        className="navbar"
-      >
-        <img
-          src={ 'icons/pet-icon.svg' }
-          alt='Pets Logo'
-          className="logo"
-          onClick={ () => navigate("/") }
-        />
-        <img
-          src={ 'icons/pet-icon-small.svg' }
-          alt='Pets Logo'
-          className="logo-mobile"
-          onClick={ () => navigate("/") }
-        />
-      </nav>
-      <div>
+      <header>
+        <nav
+          className="navbar"
+          role="navigation"
+        >
+          <img
+            src={ 'icons/pet-icon.svg' }
+            alt='Pets Application Logo'
+            className="logo"
+            onClick={ () => navigate("/") }
+          />
+          <img
+            src={ 'icons/pet-icon-small.svg' }
+            alt='Pets Application Logo'
+            className="logo-mobile"
+            onClick={ () => navigate("/") }
+          />
+        </nav>
+      </header>
+
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="profile" element={<Profile />} />
           <Route path="directory" element={<Directory />} />
         </Routes>
-      </div>
+      </main>
 
 
       {/* Footer Component */}
-      <div className="footer">
-      </div>
+      <footer className="footer">
+      </footer>
     </div>
   );
 }

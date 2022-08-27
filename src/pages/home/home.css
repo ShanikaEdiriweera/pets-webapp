@@ -14,7 +14,8 @@
 
 .results {
   display: flex;
-  gap: 30px;
+  gap: 3%;
+  flex-wrap: wrap;
 }
 
 .pets-directory {

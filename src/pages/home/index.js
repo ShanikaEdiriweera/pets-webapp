@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 // components
 import Results from "../../components/Results";
+import Search from "./Search";
 import Categories from "./Categories";
 
 // actions
@@ -17,19 +18,25 @@ function Home() {
   const navigate = useNavigate();
 
   const pets = useSelector((state) => state.pets.data);
+  const [results, setResults] = useState(pets);
 
   useEffect(() => {
     dispatch(fetchPets());
   }, [dispatch]);
 
+  useEffect(() => {
+    setResults(pets);
+  }, [pets])
+
   return (
-    <div className="row">
+    <>
       <div className="content-less"></div>
       <div className="content">
         <h1>Pets</h1>
         {/* Search Component */}
+        <Search pets={pets} setResults={setResults} />
 
-        {pets.length > 0 ? <Results pets={pets} limit={3} isOnlyAvailable={ false } /> : null}
+        {results.length > 0 ? <Results pets={results} limit={3} isOnlyAvailable={ false } /> : null}
 
         {/* Pets Directory Component */}
         <div className="pets-directory">
@@ -53,7 +60,7 @@ function Home() {
         <Categories />
       </div>
       <div className="content-less"></div>
-    </div>
+    </>
   );
 }
 
