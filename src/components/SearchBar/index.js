@@ -15,8 +15,9 @@ function SearchBar(props) {
 
   return (
     <div className="searchBar">
-      <button className="search-icon" onClick={(e) => e.preventDefault()}>
+      <button className="search-icon-wrapper" onClick={(e) => e.preventDefault()}>
         <img
+          className="search-icon"
           src="/icons/search.svg"
           alt="search icon"
           onClick={ () => {} }
