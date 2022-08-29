@@ -18,16 +18,16 @@
 
 .pet-image:hover {
   opacity: 80%;
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
 .pet-image:active {
-  transform: scale(0.95)
+  transform: scale(0.95);
 }
 
 .pet-image:active:after {
   opacity: 100%;
-  transform: scale(1)
+  transform: scale(1);
 }
 
 @media only screen and (max-width: 480px) {
@@ -47,5 +47,10 @@
     width: 45%;
     /* height: 25vw; */
     padding-top: 35%;
+  }
+
+  .pet-image:active {
+    transform: scale(1.05);
+    opacity: 80%;
   }
 }

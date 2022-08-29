@@ -12,16 +12,16 @@
 
 .button:hover {
   opacity: 80%;
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
 .button:active {
-  transform: scale(0.95)
+  transform: scale(0.95);
 }
 
 .button:active:after {
   opacity: 100%;
-  transform: scale(1)
+  transform: scale(1);
 }
 
 .primary {
@@ -52,5 +52,10 @@
 
   .button-mobile {
     display: flex;
+  }
+
+  .button:active {
+    transform: scale(1.1);
+    opacity: 75%;
   }
 }
