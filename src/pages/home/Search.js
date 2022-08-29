@@ -24,7 +24,6 @@ function Search({ pets, setResults }) {
 
   const onSearch = (query) => {
     const results = fuse.search(query);
-    console.log('results', results);
     const petResults = results.map(result => result.item);
     setResults(petResults);
   };

@@ -1,3 +1,5 @@
+import './category.css';
+
 function Category({ category }) {
   return (
     <div className="category-card" >

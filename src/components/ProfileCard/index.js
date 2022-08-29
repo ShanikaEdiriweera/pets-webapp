@@ -11,7 +11,7 @@ function ProfileCard({ pet }) {
         className="pet-image"
         style={{backgroundImage: `url(${pet.photo})`}}
         onClick={ () => navigate("/profile") }
-        role="image"
+        role="img"
       >
       </div>
       <h4>{ pet.name }</h4>
@@ -20,6 +20,7 @@ function ProfileCard({ pet }) {
         isIcon={ false }
         isPrimary={ true }
         onClick={ () => navigate("/profile") } 
+        label={ `View ${ pet.name }'s profile`}
       />
       <Button
         icon="/icons/arrow-right.svg"
@@ -27,6 +28,7 @@ function ProfileCard({ pet }) {
         isPrimary={ true }
         onClick={ () => navigate("/profile") } 
         isMobile={ true }
+        label={ `View ${ pet.name }'s profile`}
       />
     </div>
   );

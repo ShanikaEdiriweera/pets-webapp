@@ -18,6 +18,7 @@ function App() {
             alt='Pets Application Logo'
             className="logo"
             onClick={ () => navigate("/") }
+            onKeyUp={ () => navigate("/") }
           />
           <img
             src={ 'icons/pet-icon-small.svg' }

@@ -8,7 +8,8 @@ function Button(props) {
     icon,
     isPrimary,
     styleOverride,
-    isMobile=false
+    isMobile=false,
+    label
   } = props;
 
   let className = "button";
@@ -29,6 +30,7 @@ function Button(props) {
       onClick={ onClick }
       className={ className }
       style={ styleOverride }
+      aria-label={ label }
     >
       {
         isIcon ? <img src={ icon } alt="button icon" ></img> : text

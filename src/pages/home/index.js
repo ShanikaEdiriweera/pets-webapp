@@ -49,6 +49,7 @@ function Home() {
               onClick={ () => navigate("/directory") } 
               icon="/icons/arrow-right.svg"
               styleOverride={{ margin: "1rem 0" }}
+              label="See all available pets"
             />
           </div>
           <div className="pets-directory-left">
@@ -64,6 +65,7 @@ function Home() {
               text="See all"
               onClick={ () => navigate("/directory") } 
               styleOverride={{ width: "250px", marginTop: "25px", marginBottom: "25px" }}
+              label="See all available pets"
             />
           </div>
         </div>
