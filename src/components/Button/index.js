@@ -7,7 +7,8 @@ function Button(props) {
     isIcon,
     icon,
     isPrimary,
-    styleOverride
+    styleOverride,
+    isMobile=false
   } = props;
 
   let className = "button";
@@ -17,6 +18,11 @@ function Button(props) {
     className += " secondary"
   }
   if (isIcon) className += " icon-button";
+  if (isMobile) {
+    className += " button-mobile";
+  } else {
+    className += " button-desktop";
+  }
 
   return (
     <button

@@ -40,6 +40,17 @@ function Home() {
 
         {/* Pets Directory Component */}
         <div className="pets-directory">
+          <div className="pets-directory-top">
+            <h2>Pets Directory</h2>
+            <Button
+              isIcon={ true }
+              isPrimary={ true }
+              isMobile={ true }
+              onClick={ () => navigate("/directory") } 
+              icon="/icons/arrow-right.svg"
+              styleOverride={{ margin: "1rem 0" }}
+            />
+          </div>
           <div className="pets-directory-left">
             <img src="/images/treats.jpeg" alt="treats" className="pets-directory-image"/>
           </div>

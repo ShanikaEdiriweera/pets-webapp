@@ -9,6 +9,8 @@
     --dark-grey: #666666;
     --grey: #DDDDDD;
     --light-grey: #F0F0F0;
+
+    --root-padding: 30px;
 }
 
 * {
@@ -64,7 +66,7 @@ body {
 }
 
 .navbar {
-    padding: 0.5rem 3rem;
+    padding: 1rem 3rem;
     background-color: var(--yellow);
 }
 
@@ -103,7 +105,7 @@ body {
     }
 
     .navbar {
-        padding: 1rem 0.5rem;
+        padding: 2rem var(--root-padding) 0 var(--root-padding);
         background-color: var(--white);
     }
 }

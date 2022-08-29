@@ -33,3 +33,24 @@
   color: var(--blue);
   background-color: var(--white);
 }
+
+.icon-button {
+  min-width: auto;
+  padding: 6px;
+  display: flex;
+  height: auto;
+}
+
+.button-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .button-desktop {
+    display: none;
+  }
+
+  .button-mobile {
+    display: flex;
+  }
+}

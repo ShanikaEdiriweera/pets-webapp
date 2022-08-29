@@ -3,7 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 10px;
-  margin: 1rem 0rem;
+  margin: 1rem 0 0 0;
 }
 
 .pill {
@@ -21,13 +21,22 @@
   padding: 8px 12px;
   display: flex;
   column-gap: 8px;
-}
-
-.pill:hover {
-  box-shadow: 0 0 0 2px var(--blue);
+  margin: 0.25rem 0;
 }
 
 .pill-selected {
   font-weight: bold;
   box-shadow: 0 0 0 2px var(--blue);
+}
+
+@media only screen and (min-width: 481px) {
+  .pill:hover {
+    box-shadow: none;
+  }  
+}
+
+@media only screen and (max-width: 480px) {
+  .pill:active {
+    box-shadow: 0 0 0 2px var(--blue);
+  }
 }

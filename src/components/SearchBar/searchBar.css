@@ -56,7 +56,7 @@
     width: 100%;
   }
 
-  #searchQueryInput {
-    background: var(--grey);
+  .searchQueryInput {
+    background: var(--light-grey);
   }
 }
