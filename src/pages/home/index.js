@@ -26,6 +26,7 @@ function Home() {
 
   useEffect(() => {
     setResults(pets);
+    console.log('pets===============', pets)
   }, [pets])
 
   return (

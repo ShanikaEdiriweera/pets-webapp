@@ -25,13 +25,25 @@ function ProfileCard({ pet }) {
       <Button
         icon="/icons/arrow-right.svg"
         isIcon={ true }
+        isMobile={ true }
         isPrimary={ true }
         onClick={ () => navigate("/profile") } 
-        isMobile={ true }
         label={ `View ${ pet.name }'s profile`}
       />
     </div>
   );
+}
+
+function resolveBatches (promises) {
+  let arr;
+  let fn;
+  promises.forEach (p => {
+    p.then(v => {
+      arr.push(v);
+      arr.length === 10 && fn(arr);
+    });
+  });
+  return new Promise(r => fn = r)
 }
 
 export default ProfileCard;

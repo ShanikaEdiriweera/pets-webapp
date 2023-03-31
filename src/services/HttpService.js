@@ -36,3 +36,5 @@ export const request = (method, endPoint, data) => {
       return error;
     });
 };
+
+export const axiosInstance = axios.create(); 
